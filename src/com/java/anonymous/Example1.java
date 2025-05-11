@@ -8,7 +8,7 @@ interface Greeting{
 public class Example1 {
 	
 	public static void main(String[] args) {
-		
+		//added new line
 		Greeting anoyoumusGreeting = new Greeting() {
 
 			@Override
