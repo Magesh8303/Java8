@@ -7,14 +7,23 @@ public class AnonymousClassExample1 {
 
 	public static void main(String[] args) {
 		
-		List<String> names= Arrays.asList("Magesh","Kumar","Aathi");
+		Thread t = new Thread() {
+			
+			public void run() {
+				System.out.println("Thread name "+Thread.currentThread().getName());
+			}
+			
+		};
+		
+		t.run();
+		t.start();
 				 
 		Runnable run = new Runnable() {
 
 			@Override
 			public void run() {
 				
-				System.out.println("running");
+				System.out.println("running "+Thread.currentThread().getName());
 				
 			}
 			
